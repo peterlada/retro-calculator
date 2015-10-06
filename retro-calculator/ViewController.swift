@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         } catch let err as NSError {
             print(err.debugDescription)
         }
+        
+        outputLbl.text = "0"
     }
 
     @IBAction func numberPressed(btn: UIButton!) {
