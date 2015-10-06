@@ -12,6 +12,7 @@
 		DEDDE2321BC3247E00D172C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDE2301BC3247E00D172C0 /* Main.storyboard */; };
 		DEDDE2341BC3247E00D172C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEDDE2331BC3247E00D172C0 /* Assets.xcassets */; };
 		DEDDE2371BC3247E00D172C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEDDE2351BC3247E00D172C0 /* LaunchScreen.storyboard */; };
+		DEDDE23F1BC3517900D172C0 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DEDDE23E1BC3517900D172C0 /* Minecraft.ttf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DEDDE2331BC3247E00D172C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEDDE2361BC3247E00D172C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEDDE2381BC3247E00D172C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEDDE23E1BC3517900D172C0 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		DEDDE22B1BC3247E00D172C0 /* retro-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				DEDDE23E1BC3517900D172C0 /* Minecraft.ttf */,
 				DEDDE22C1BC3247E00D172C0 /* AppDelegate.swift */,
 				DEDDE22E1BC3247E00D172C0 /* ViewController.swift */,
 				DEDDE2301BC3247E00D172C0 /* Main.storyboard */,
@@ -123,6 +126,7 @@
 			files = (
 				DEDDE2371BC3247E00D172C0 /* LaunchScreen.storyboard in Resources */,
 				DEDDE2341BC3247E00D172C0 /* Assets.xcassets in Resources */,
+				DEDDE23F1BC3517900D172C0 /* Minecraft.ttf in Resources */,
 				DEDDE2321BC3247E00D172C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
