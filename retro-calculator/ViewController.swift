@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         case Multiply = "*"
         case Add = "+"
         case Subtract = "-"
+        case Equals = "="
         case Empty = ""
     }
     
@@ -45,9 +46,41 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberPressed(btn: UIButton!) {
-        buttonSound.play()
+        playSound()
         runningNumber += String(btn.tag)
         outputLbl.text = runningNumber
+    }
+    
+    @IBAction func didPressAdd(btn: UIButton!) {
+        processOperation(Operation.Add)
+    }
+    
+    @IBAction func didPressSubtract(btn: UIButton!) {
+        processOperation(Operation.Subtract)
+    }
+
+    @IBAction func didPressMultiply(btn: UIButton!) {
+        processOperation(Operation.Multiply)
+    }
+    
+    @IBAction func didPressDivide(btn: UIButton!) {
+        processOperation(Operation.Divide)
+    }
+    
+    @IBAction func didPressEqual(btn: UIButton!) {
+        processOperation(Operation.Equals)
+    }
+    
+    func processOperation(oper: Operation) {
+        playSound()
+    }
+    
+    func playSound() {
+        if buttonSound.playing {
+            buttonSound.stop()
+        }
+        buttonSound.play()
+        
     }
 
 }
