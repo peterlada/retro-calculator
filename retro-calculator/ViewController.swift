@@ -68,11 +68,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didPressEqual(btn: UIButton!) {
-        processOperation(Operation.Equals)
+        processOperation(currentOperation)
     }
     
     func processOperation(oper: Operation) {
         playSound()
+        
+        if currentOperation != Operation.Empty {
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                
+                var result = ""
+                if oper == Operation.Add {
+                    result = "\(Double(leftValStr)! + Double(rightValStr)!)"
+                } else if oper == Operation.Subtract {
+                    result = "\(Double(leftValStr)! - Double(rightValStr)!)"
+                } else if oper == Operation.Multiply {
+                    result = "\(Double(leftValStr)! * Double(rightValStr)!)"
+                } else if oper == Operation.Divide {
+                    result = "\(Double(leftValStr)! / Double(rightValStr)!)"
+                }
+
+                leftValStr = result
+                outputLbl.text = result
+                
+                currentOperation = oper
+            }
+        } else {
+            leftValStr = runningNumber
+            runningNumber = ""
+        }
+        currentOperation = oper
     }
     
     func playSound() {
