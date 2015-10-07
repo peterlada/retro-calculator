@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
-        outputLbl.text = "0"
+        clear()
     }
 
     @IBAction func numberPressed(btn: UIButton!) {
@@ -69,6 +69,19 @@ class ViewController: UIViewController {
     
     @IBAction func didPressEqual(btn: UIButton!) {
         processOperation(currentOperation)
+    }
+    
+    @IBAction func didPressClear(btn: UIButton!) {
+        playSound()
+        clear()
+    }
+    
+    func clear() {
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        outputLbl.text = "0"
     }
     
     func processOperation(oper: Operation) {
